@@ -29,4 +29,6 @@ umount debian/dev
 umount debian/proc
 umount debian/sys
 rm debian/var/lib/apt/lists/*
+#Optimizing size of environment, removing unnecessary documentation and manpages
+rm -R ./debian/usr/share/doc/* ./debian/usr/share/info/* ./debian/usr/share/man/* ./debian/usr/share/locale/* ./debian/usr/share/lintian/*
 tar -cvzf debian_clean.tgz debian
